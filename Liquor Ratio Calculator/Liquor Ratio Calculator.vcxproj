@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\core_headers.ixx" />
     <ClCompile Include="src\function.cpp" />
     <ClCompile Include="include\function.ixx" />
     <ClCompile Include="src\print.cpp" />

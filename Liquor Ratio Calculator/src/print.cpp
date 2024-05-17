@@ -9,6 +9,9 @@
  */
 module print;
 
+
+import <cmath>;
+import <format>;
 import <iostream>;
 import <string_view>;
 
@@ -21,6 +24,20 @@ LCR_START
 void printMessage(std::string_view message) noexcept
 {
     std::cout << message;
+}
+
+
+// Print the calculated result (liquor ratio)
+void printResult(const double liquor_ratio, const double weight, const std::uint32_t waterUsage) noexcept
+{
+    printMessage(std::format("                        \n\n{:^54}\n"
+                             "------------------------------------------------------\n"
+                             "  Liquor Ratio:   1 : {}  ({:.3f} before rounding)\n"
+                             "------------------------------------------------------\n"
+                             "  Total weight:   {:.2f}  KG\n"
+                             "  Water Usage :   {}    L\n"
+                             "------------------------------------------------------\n\n",
+                             "Result", std::round(liquor_ratio), liquor_ratio, weight, waterUsage));
 }
 
 LCR_END

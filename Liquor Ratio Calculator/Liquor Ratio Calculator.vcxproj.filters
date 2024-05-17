@@ -45,6 +45,9 @@
     <ClCompile Include="include\function.ixx">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="include\core_headers.ixx">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\global.h">

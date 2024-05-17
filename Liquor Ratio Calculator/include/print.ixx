@@ -9,13 +9,13 @@
 */
 export module print;
 
+
 import <string_view>;
 
 #include "global.h"
 
 
 LCR_START
-
 
 /**
  * @brief   Print the message with a single std::cout
@@ -24,5 +24,12 @@ LCR_START
  */
 EXPORT void printMessage(std::string_view message) noexcept;
 
+
+/**
+* @brief   Print the calculated result (liquor ratio)
+*
+* @param[in] liquor_ratio   The result (liquor ratio) after all the calculation
+*/
+EXPORT void printResult(const double liquor_ratio, const double weight, const std::uint32_t waterUsage) noexcept;
 
 LCR_END

@@ -7,13 +7,29 @@
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at http://opensource.org/licenses/MIT)
  */
-import core;
-import fabric;
+import <string>;
+
+import core_header;
 
 
 int main()
 {
-    LCR::Fabric fabric { LCR::getValues() };
+    using namespace LCR;
+
+    std::string flag { "Y" };
+
+    while (flag == "Y")
+    {
+        Fabric fabric { getValues() };
+        const double weight { calculateWeight(fabric) };
+        const std::uint32_t waterUsage { determineWaterUsage(weight, fabric.m_type) };
+        const double liquor_ratio { calculateLiquorRatio(weight, waterUsage) };
+
+        printResult(liquor_ratio, weight, waterUsage);
+
+        printMessage("Do you want to calculate another (Y = Yes; N = No): ");
+        flag = getString();
+    }
 
     return 0;
 }
