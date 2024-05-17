@@ -42,7 +42,7 @@ LCR_START
         }
 
         std::cin.clear(); // Clear any error flags
-        printMessage("Invalid input. Please enter alphabetic characters only: ");
+        printMessage("\nInvalid input. Please enter alphabetic characters only: ");
     }
 
     return input;
@@ -77,7 +77,7 @@ LCR_START
         }
 
         std::cin.clear(); // Clear any error flags
-        printMessage("Invalid input. Please enter a valid number: ");
+        printMessage("\nInvalid input. Please enter a valid number: ");
     }
 
     return number;
