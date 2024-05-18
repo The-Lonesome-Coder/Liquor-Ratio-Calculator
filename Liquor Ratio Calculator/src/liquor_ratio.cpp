@@ -1,6 +1,7 @@
 /**
  * @file        liquor_ratio.cpp
  * @ingroup     Liquor Ratio Calculator (LRC)
+ * @version     1.0
  * @brief       Driver code for the LCR program
  *
  * Copyright (c) 2024 The.Lonesome.Coder (the.lonesome.coder@gmail.com)
@@ -12,6 +13,7 @@ import <string>;
 import core_header;
 
 
+// Driver code
 int main()
 {
     using namespace LCR;
