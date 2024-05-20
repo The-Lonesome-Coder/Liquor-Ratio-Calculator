@@ -10,7 +10,7 @@
 export module core_header;
 
 
-export import function;
 export import core;
 export import fabric;
+export import function;
 export import print;

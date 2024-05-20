@@ -34,8 +34,8 @@ void printResult(const double liquor_ratio, const double weight, const std::uint
                              "------------------------------------------------------\n"
                              "  Liquor Ratio:   1 : {}  ({:.3f} before rounding)\n"
                              "------------------------------------------------------\n"
-                             "  Total weight:   {:.2f}  KG\n"
-                             "  Water Usage :   {}    L\n"
+                             "  Total weight:   {:<6.2f}  KG\n"
+                             "  Water Usage :   {:<6}  L\n"
                              "------------------------------------------------------\n\n",
                              "Result", std::round(liquor_ratio), liquor_ratio, weight, waterUsage));
 }

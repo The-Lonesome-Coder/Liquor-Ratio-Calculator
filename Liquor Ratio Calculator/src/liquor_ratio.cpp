@@ -8,6 +8,7 @@
  *
  * Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt or copy at http://opensource.org/licenses/MIT)
  */
+import <algorithm>;
 import <string>;
 
 import core_header;
@@ -20,12 +21,14 @@ int main()
 
     std::string flag { "Y" };
 
-    while (flag == "Y")
+    // Main loop
+    while (stringToUpper(flag) == "Y")
     {
         Fabric fabric { getValues() };
-        const double weight { calculateWeight(fabric) };
-        const std::uint32_t waterUsage { determineWaterUsage(weight, fabric.m_type) };
-        const double liquor_ratio { calculateLiquorRatio(weight, waterUsage) };
+
+        const double            weight { calculateWeight(fabric) };
+        const std::uint32_t     waterUsage { determineWaterUsage(weight, fabric.m_type) };
+        const double            liquor_ratio { calculateLiquorRatio(weight, waterUsage) };
 
         printResult(liquor_ratio, weight, waterUsage);
 
@@ -33,5 +36,5 @@ int main()
         flag = getString();
     }
 
-    return 0;
+    printMessage("Thank you for using the Liquor Ratio Calculator. Goodbye!\n");
 }

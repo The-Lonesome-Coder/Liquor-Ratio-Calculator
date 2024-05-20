@@ -24,6 +24,16 @@ import print;
 
 LCR_START
 
+// Convert a string to uppercase and return it
+[[nodiscard]] std::string stringToUpper(std::string_view input) noexcept
+{
+    std::string result(input.size(), '\0'); // Create a string of the same size as input
+    std::ranges::transform(input, result.begin(), [](char ch) { return std::toupper(ch); });
+
+    return result;
+}
+
+
 // Keeps prompting for string input from user and check validity, return the input until valid
 [[nodiscard]] std::string getString() noexcept
 {
@@ -94,6 +104,5 @@ constexpr [[nodiscard]] std::string trimString(std::string_view input) noexcept
 
     return std::string(trimmed_view.begin(), trimmed_view.end());
 }
-
 
 LCR_END

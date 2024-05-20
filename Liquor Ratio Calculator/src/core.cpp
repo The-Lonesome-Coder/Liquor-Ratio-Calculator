@@ -92,7 +92,7 @@ constexpr [[nodiscard]] std::uint32_t determineWaterUsage(const double weight, s
 // Get the type of the fabric from the user, and store it in the LCR::Fabric object
 void getType(Fabric& fabric) noexcept
 {
-    printMessage("Please enter the type of the fabric (Nylon = N; Polyester = P): ");
+    printMessage("Type of the fabric (Nylon = N; Polyester = P): ");
 
     fabric.m_type = getString();
 }
@@ -101,7 +101,7 @@ void getType(Fabric& fabric) noexcept
 // Get the total weight of the fabric from the user, and store it in the LCR::Fabric object
 void getTotalWeight(Fabric& fabric) noexcept
 {
-    printMessage("Please enter the total yard of the fabric: ");
+    printMessage("Total yard: ");
 
     fabric.m_total = getNumeric();
 }
@@ -110,7 +110,7 @@ void getTotalWeight(Fabric& fabric) noexcept
 // Get the yard weight of the fabric from the user, and store it in the LCR::Fabric object
 void getYardWeight(Fabric& fabric) noexcept
 {
-    printMessage("Please enter the yard weight of the fabric: ");
+    printMessage("Yard weight: ");
 
     fabric.m_yard_weight = getNumeric();
 }
